@@ -43,11 +43,23 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
-    implementation("com.google.firebase:firebase-messaging-ktx")
+
+
     implementation("com.amazonaws:aws-android-sdk-sns:2.48.0")
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("androidx.navigation:navigation-compose:2.7.0")
+
+    // Retrofit / networking
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.11.0")
+
+    // Firebase Realtime Database (KTX) and BOM
+    implementation(platform("com.google.firebase:firebase-bom:34.2.0"))
+    implementation("com.google.firebase:firebase-messaging-ktx")
+    implementation("com.google.firebase:firebase-database-ktx:20.2.0")
+    implementation("com.google.firebase:firebase-analytics-ktx") // optional
+
+// Tasks <-> coroutines await helper for Firebase Tasks
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.1.1")
 }

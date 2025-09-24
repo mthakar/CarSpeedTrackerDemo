@@ -5,5 +5,5 @@ import com.example.speedmonitor.domain.model.SpeedEvent
 
 interface FleetRepository {
     suspend fun getCustomer(customerId: String): Customer
-    suspend fun reportSpeed(event: SpeedEvent)
+    suspend fun reportSpeed(customerId: String, speed: Int)
 }

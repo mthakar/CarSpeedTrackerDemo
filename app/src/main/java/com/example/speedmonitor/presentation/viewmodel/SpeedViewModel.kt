@@ -24,7 +24,7 @@ class SpeedViewModel(
                 _speed.value = current
                 val limit = repository.getCustomer(customerId).speedLimit
                 if (current > limit) {
-                    repository.reportSpeed(SpeedEvent(customerId, current))
+                    repository.reportSpeed(customerId, speed.value)
                 }
             }
         }
